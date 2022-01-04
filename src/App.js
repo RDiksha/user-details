@@ -6,11 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function App() {
   const dispatch = useDispatch();
-  //const [result,setResult]= useState([]);
   const result = useSelector((state) => state.userData);
   const getAPI = async () => {
     const { data } = await axios.get("https://reqres.in/api/users?page=1");
-    //setResult(data.data);
     dispatch({ type: "SET_USER_DATA", payload: data.data });
   };
   useEffect(
