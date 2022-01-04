@@ -11,7 +11,6 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 export default function EditTable({ index, open, setOpen }) {
-  console.log("index", index, open);
   const [newValue, setNewValue] = useState([]);
   const dispatch = useDispatch();
   const handleClose = () => {
