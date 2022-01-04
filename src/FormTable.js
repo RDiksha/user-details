@@ -50,7 +50,6 @@ export default function FormTable({ index, setNewValue }) {
   ];
   const handleChange = (name, e) => {
     let newValue = [...userData, (userData[index][name] = e.target.value)];
-    console.log(newValue, "data");
     setNewValue(newValue);
   };
   return (
